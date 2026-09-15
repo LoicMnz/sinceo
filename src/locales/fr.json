@@ -21,7 +21,9 @@
     "deleteCounter": "Supprimer le compteur",
     "keep": "Conserver",
     "reset": "Réinitialiser",
-    "clearSearch": "Effacer la recherche"
+    "clearSearch": "Effacer la recherche",
+    "import": "Importer une sauvegarde",
+    "export": "Exporter une sauvegarde"
   },
   "search": {
     "label": "Rechercher un compteur",
@@ -106,7 +108,9 @@
     "created": "Votre nouveau compteur est prêt.",
     "edited": "Compteur modifié.",
     "reset": "Nouveau départ enregistré. L’historique est conservé.",
-    "deleted": "Compteur supprimé."
+    "deleted": "Compteur supprimé.",
+    "exported": "Sauvegarde exportée.",
+    "imported": "Sauvegarde importée."
   },
   "errors": {
     "name": "Donnez un nom à votre compteur.",
@@ -115,6 +119,11 @@
     "sync": "Les données ont changé dans un autre onglet et ne peuvent pas être lues. Rechargez la page.",
     "conflict": "Les compteurs ont changé dans un autre onglet. Votre action n’a pas été appliquée : veuillez la renouveler.",
     "save": "Enregistrement impossible. Votre action n’a pas été sauvegardée. Vérifiez l’espace disponible et le stockage du navigateur."
+    ,"importInvalid": "Ce fichier n’est pas une sauvegarde Sincéo valide. Vos compteurs n’ont pas été modifiés."
+  },
+  "import": {
+    "confirm_one": "Importer cette sauvegarde et remplacer vos {{count}} compteur ?",
+    "confirm_other": "Importer cette sauvegarde et remplacer vos {{count}} compteurs ?"
   },
   "theme": {
     "light": "Passer au thème jour",

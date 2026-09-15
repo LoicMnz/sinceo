@@ -51,6 +51,19 @@ Cette version ne contient ni compte utilisateur ni serveur : les compteurs reste
 sur cet appareil et cette origine web. Effacer les données du navigateur les supprime.
 Ne pas y conserver de données irremplaçables sans sauvegarde externe.
 
+## Export et import
+
+Les deux actions de l’en-tête exportent et importent une sauvegarde JSON. Un export
+contient l’enveloppe versionnée déjà utilisée par le stockage local (`version: 1` et
+`counters`) et porte un nom du type `sinceo-2026-09-15.json`. L’import ne remplace
+les compteurs qu’après lecture complète et validation de cette enveloppe ; un fichier
+illisible ou invalide laisse les données présentes intactes. Lorsque des compteurs
+existent déjà, une confirmation est demandée avant leur remplacement.
+
+L’import remplace l’ensemble des compteurs afin de préserver les identifiants,
+les dates et l’historique sans fusion ambiguë. Il est possible d’annuler le choix
+de fichier ou la confirmation sans modifier les données.
+
 ## Suite envisagée
 
 - Calendrier et visualisation des réinitialisations.

@@ -21,7 +21,9 @@
     "deleteCounter": "Delete counter",
     "keep": "Keep counter",
     "reset": "Reset",
-    "clearSearch": "Clear search"
+    "clearSearch": "Clear search",
+    "import": "Import backup",
+    "export": "Export backup"
   },
   "search": {
     "label": "Search counters",
@@ -106,7 +108,9 @@
     "created": "Your new counter is ready.",
     "edited": "Counter updated.",
     "reset": "Fresh start saved. Your history is preserved.",
-    "deleted": "Counter deleted."
+    "deleted": "Counter deleted.",
+    "exported": "Backup exported.",
+    "imported": "Backup imported."
   },
   "errors": {
     "name": "Give your counter a name.",
@@ -114,7 +118,12 @@
     "read": "Unable to read your counters. Your data is preserved. Check browser storage, then reload the page.",
     "sync": "Data changed in another tab and could not be read. Reload the page.",
     "conflict": "Counters changed in another tab. Your action was not applied. Please try again.",
-    "save": "Unable to save your action. Check available space and browser storage."
+    "save": "Unable to save your action. Check available space and browser storage.",
+    "importInvalid": "This file is not a valid Sincéo backup. Your counters were not changed."
+  },
+  "import": {
+    "confirm_one": "Import this backup and replace your {{count}} counter?",
+    "confirm_other": "Import this backup and replace your {{count}} counters?"
   },
   "theme": {
     "light": "Switch to light theme",

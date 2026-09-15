@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import type { ReactNode } from 'react'
+import type { ChangeEvent, ReactNode } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useTheme } from './useTheme'
 import { colors, createCounter, daysSince, decodeCounters, encodeCounters, formatDate, resetCounter, STORAGE_KEY, today, validDate } from './lib/counters'
@@ -9,10 +9,12 @@ import './App.css'
 type ModalState = { kind: 'create' } | { kind: 'edit' | 'reset' | 'delete' | 'history'; counter: Counter }
 const colorSymbols: Record<Color, string> = { sage: '✳', peach: '☀', lavender: '✦', sand: '◈' }
 
-function Icon({ name }: { name: 'plus' | 'reset' | 'edit' | 'close' | 'calendar' | 'trash' | 'arrow' | 'sun' | 'moon' }) {
+function Icon({ name }: { name: 'plus' | 'reset' | 'edit' | 'close' | 'calendar' | 'trash' | 'arrow' | 'sun' | 'moon' | 'download' | 'upload' }) {
   const paths = {
     sun: 'M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8ZM12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5',
     moon: 'M20.9 13A9 9 0 0 1 11 3.1 9 9 0 1 0 20.9 13Z',
+    download: 'M12 3v12m0 0 4-4m-4 4-4-4M4 20h16',
+    upload: 'M12 21V9m0 0 4 4m-4-4-4 4M4 4h16',
     plus: 'M12 5v14M5 12h14',
     reset: 'M3 10a9 9 0 1 1 2 8M3 4v6h6',
     edit: 'm16 3 5 5-12 12H4v-5L16 3Zm-2 2 5 5',
@@ -170,6 +172,7 @@ function History({ counter }: { counter: Counter }) {
 function App() {
   const { theme, toggleTheme } = useTheme()
   const { t, i18n } = useTranslation()
+  const importInputRef = useRef<HTMLInputElement>(null)
   const [initial] = useState(() => {
     try { return { counters: decodeCounters(localStorage.getItem(STORAGE_KEY)), error: '' } }
     catch { return { counters: [], error: 'errors.read' } }
@@ -181,6 +184,32 @@ function App() {
   const [query, setQuery] = useState('')
   const [sort, setSort] = useState('recent')
   const [notice, setNotice] = useState('')
+
+  function exportCounters() {
+    const blob = new Blob([encodeCounters(counters)], { type: 'application/json;charset=utf-8' })
+    const url = URL.createObjectURL(blob)
+    const link = document.createElement('a')
+    link.href = url
+    link.download = `sinceo-${today()}.json`
+    document.body.appendChild(link)
+    link.click()
+    link.remove()
+    URL.revokeObjectURL(url)
+    setNotice('notice.exported')
+  }
+
+  async function importCounters(event: ChangeEvent<HTMLInputElement>) {
+    const file = event.target.files?.[0]
+    event.target.value = ''
+    if (!file) return
+    try {
+      const imported = decodeCounters(await file.text())
+      if (counters.length > 0 && !window.confirm(t('import.confirm', { count: imported.length }))) return
+      save(imported, 'notice.imported')
+    } catch {
+      setStorageError('errors.importInvalid')
+    }
+  }
 
   useEffect(() => {
     document.documentElement.lang = i18n.language
@@ -226,6 +255,11 @@ function App() {
     <header className="site-header">
       <a href="./" className="brand" aria-label={t('home')}><span className="brand-symbol" aria-hidden="true"><span className="brand-monogram">s<span className="brand-degree">°</span></span></span><span>sincé<span className="brand-accent">o</span></span></a>
       <span className="header-note">{t('tagline')}</span>
+      <div className="data-actions">
+        <input ref={importInputRef} className="sr-only" type="file" accept="application/json,.json" onChange={importCounters} />
+        <button className="icon-button" onClick={() => importInputRef.current?.click()} aria-label={t('actions.import')} title={t('actions.import')}><Icon name="upload" /></button>
+        <button className="icon-button" onClick={exportCounters} aria-label={t('actions.export')} title={t('actions.export')}><Icon name="download" /></button>
+      </div>
       <button className="icon-button theme-toggle" onClick={toggleTheme} aria-label={t(theme === 'dark' ? 'theme.light' : 'theme.dark')} title={t(theme === 'dark' ? 'theme.light' : 'theme.dark')}>
         <Icon name={theme === 'dark' ? 'sun' : 'moon'} />
       </button>

@@ -39,10 +39,10 @@ function isObject(value: unknown): value is Record<string, unknown> {
   return typeof value === 'object' && value !== null
 }
 function isReset(value: unknown): value is Reset {
-  return isObject(value) && typeof value.id === 'string' && validDate(value.previousDate) && validDate(value.date) && typeof value.recordedAt === 'string' && Number.isFinite(Date.parse(value.recordedAt))
+  return isObject(value) && typeof value.id === 'string' && validDate(value.previousDate) && value.previousDate <= today() && validDate(value.date) && value.date <= today() && typeof value.recordedAt === 'string' && Number.isFinite(Date.parse(value.recordedAt))
 }
 function isCounter(value: unknown): value is Counter {
-  return isObject(value) && typeof value.id === 'string' && typeof value.name === 'string' && value.name.trim().length > 0 && typeof value.description === 'string' && colors.includes(value.color as Color) && validDate(value.startDate) && typeof value.createdAt === 'string' && Number.isFinite(Date.parse(value.createdAt)) && Array.isArray(value.resets) && value.resets.every(isReset)
+  return isObject(value) && typeof value.id === 'string' && typeof value.name === 'string' && value.name.trim().length > 0 && typeof value.description === 'string' && colors.includes(value.color as Color) && validDate(value.startDate) && value.startDate <= today() && typeof value.createdAt === 'string' && Number.isFinite(Date.parse(value.createdAt)) && Array.isArray(value.resets) && value.resets.every(isReset)
 }
 export function decodeCounters(raw: string | null): Counter[] {
   if (raw === null) return []

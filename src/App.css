@@ -147,6 +147,8 @@ legend { font-size: 14px; margin-bottom: 13px; }
 }
 
 .theme-toggle { margin-left: auto; background: #edf0e5; border: 1px solid #d9dfcf; }
+.data-actions { display: flex; align-items: center; gap: 2px; }
+[data-theme="dark"] .data-actions .icon-button { color: #c2ccb7; }
 main { padding-bottom: max(24px, env(safe-area-inset-bottom)); }
 body:has(.create-dock) main { padding-bottom: calc(100px + env(safe-area-inset-bottom)); }
 
