@@ -9,8 +9,9 @@
 }
 .brand { display: flex; align-items: center; gap: 8px; min-height: 44px; font-size: 28px; font-weight: 700; letter-spacing: -1.3px; text-decoration: none; }
 .brand-symbol { display: inline-flex; position: relative; align-items: center; justify-content: center; width: 31px; height: 35px; background: #b95436; color: #fffaf4; font: 34px Georgia, serif; border-radius: 11px; transform: rotate(-8deg); margin-right: 3px; }
-.brand-symbol span { font-size: 19px; position: absolute; right: 3px; top: 0; }
-.brand-dot { color: #b95436; margin-left: -8px; }
+.brand-monogram { display: inline-flex; align-items: flex-start; line-height: 1; }
+.brand-degree { font-size: 19px; line-height: 1; margin-top: 3px; }
+.brand-accent { color: #b95436; }
 .header-note { display: none; }
 main { padding: 0 max(20px, env(safe-area-inset-right)) 0 max(20px, env(safe-area-inset-left)); max-width: 1160px; margin: auto; }
 .eyebrow { font-size: 10px; letter-spacing: 1.6px; font-weight: 650; color: #637356; display: flex; align-items: center; gap: 8px; }
@@ -153,7 +154,6 @@ body:has(.create-dock) main { padding-bottom: calc(100px + env(safe-area-inset-b
 :root[data-theme="dark"] { color-scheme: dark; color: #e4e9dd; background: #191e18; }
 [data-theme="dark"] .site-header { border-color: #343d2f; }
 [data-theme="dark"] .header-note { color: #b5c1a7; border-color: #46513d; }
-[data-theme="dark"] .brand-dot { color: #ed9877; }
 [data-theme="dark"] .theme-toggle { background: #2a3324; border-color: #46513d; color: #e2d7a7; }
 [data-theme="dark"] .sage { --card-bg: #283222; --card-ink: #bdd1a6; --card-border: #424f37; }
 [data-theme="dark"] .peach { --card-bg: #382a24; --card-ink: #edb497; --card-border: #584237; }

@@ -224,7 +224,7 @@ function App() {
 
   return <>
     <header className="site-header">
-      <a href="./" className="brand" aria-label={t('home')}><span className="brand-symbol">s<span>°</span></span>sincéo<span className="brand-dot">.</span></a>
+      <a href="./" className="brand" aria-label={t('home')}><span className="brand-symbol" aria-hidden="true"><span className="brand-monogram">s<span className="brand-degree">°</span></span></span><span>sincé<span className="brand-accent">o</span></span></a>
       <span className="header-note">{t('tagline')}</span>
       <button className="icon-button theme-toggle" onClick={toggleTheme} aria-label={t(theme === 'dark' ? 'theme.light' : 'theme.dark')} title={t(theme === 'dark' ? 'theme.light' : 'theme.dark')}>
         <Icon name={theme === 'dark' ? 'sun' : 'moon'} />
