@@ -1,0 +1,123 @@
+{
+  "home": "Sincéo, home",
+  "meta": {
+    "title": "Sincéo — Every day counts",
+    "description": "Track the days since the moments that matter, one day at a time."
+  },
+  "tagline": "Every day counts.",
+  "counters": {
+    "title": "My counters"
+  },
+  "actions": {
+    "create": "New counter",
+    "createFirst": "Create my first counter",
+    "add": "Add a counter",
+    "cancel": "Cancel",
+    "close": "Close",
+    "save": "Save",
+    "submit": "Create counter",
+    "edit": "Edit",
+    "delete": "Delete",
+    "deleteCounter": "Delete counter",
+    "keep": "Keep counter",
+    "reset": "Reset",
+    "clearSearch": "Clear search"
+  },
+  "search": {
+    "label": "Search counters",
+    "placeholder": "Search counters…",
+    "emptyTitle": "No counters found",
+    "emptyDescription": "Try another word or see all your counters."
+  },
+  "sort": {
+    "label": "Sort by",
+    "recent": "Newest first",
+    "longest": "Most days",
+    "name": "Name"
+  },
+  "empty": {
+    "eyebrow": "THE START OF SOMETHING",
+    "title": "What will your first day be?",
+    "description": "A new habit, a trip, a new houseplant… Make room for the moments that matter.",
+    "inspiration": "A little inspiration",
+    "habit": "A new habit",
+    "memory": "A happy memory",
+    "challenge": "A little challenge"
+  },
+  "card": {
+    "edit": "Edit {{name}}",
+    "delete": "Delete {{name}}",
+    "description": "Every day adds to your story.",
+    "history": "History",
+    "historyLabel_one": "History of {{name}}, {{count}} reset",
+    "historyLabel_other": "History of {{name}}, {{count}} resets",
+    "another": "Another moment to track?"
+  },
+  "day_one": "day",
+  "day_other": "days",
+  "days_one": "{{count}} day",
+  "days_other": "{{count}} days",
+  "gentleNote": "Your journey, one day at a time.",
+  "dialog": {
+    "create": "A new counter",
+    "edit": "Edit counter",
+    "reset": "A fresh start",
+    "delete": "Delete this counter?",
+    "history": "Your counter’s story"
+  },
+  "form": {
+    "introCreate": "A fresh start, a memory, a small victory.",
+    "introEdit": "The little details that make this counter yours.",
+    "name": "Counter name",
+    "namePlaceholder": "E.g. My last coffee",
+    "description": "A few words",
+    "optional": "(optional)",
+    "descriptionPlaceholder": "Why this moment matters to you…",
+    "date": "Start date",
+    "dayZero": "Your start date is day 0.",
+    "color": "A touch of color"
+  },
+  "colors": {
+    "sage": "Sage",
+    "peach": "Peach",
+    "lavender": "Lavender",
+    "sand": "Sand"
+  },
+  "reset": {
+    "intro": "A fresh start for {{name}}. The previous date will stay in your history.",
+    "date": "New start date",
+    "preview_one": "The counter will show {{count}} day.",
+    "preview_other": "The counter will show {{count}} days.",
+    "chooseDate": "Choose a date to preview the new total."
+  },
+  "delete": {
+    "description_one": "“{{name}}” and its history ({{count}} reset) will be permanently deleted.",
+    "description_other": "“{{name}}” and its history ({{count}} resets) will be permanently deleted."
+  },
+  "history": {
+    "intro": "{{name}} · Current start date: {{date}}.",
+    "empty": "No resets yet. Your story continues!",
+    "newStart": "New start on {{date}}",
+    "previous": "Previous start: {{date}}",
+    "recorded": "Reset #{{number}} · Recorded on {{date}}",
+    "help": "Dates are saved for the future calendar of your journey."
+  },
+  "notice": {
+    "created": "Your new counter is ready.",
+    "edited": "Counter updated.",
+    "reset": "Fresh start saved. Your history is preserved.",
+    "deleted": "Counter deleted."
+  },
+  "errors": {
+    "name": "Give your counter a name.",
+    "date": "Choose a valid date, no later than today.",
+    "read": "Unable to read your counters. Your data is preserved. Check browser storage, then reload the page.",
+    "sync": "Data changed in another tab and could not be read. Reload the page.",
+    "conflict": "Counters changed in another tab. Your action was not applied. Please try again.",
+    "save": "Unable to save your action. Check available space and browser storage."
+  },
+  "theme": {
+    "light": "Switch to light theme",
+    "dark": "Switch to dark theme"
+  }
+}

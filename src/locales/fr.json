@@ -1,0 +1,123 @@
+{
+  "home": "Sincéo, accueil",
+  "meta": {
+    "title": "Sincéo — Chaque jour compte",
+    "description": "Suivez les jours depuis les moments qui comptent, un jour à la fois."
+  },
+  "tagline": "Chaque jour compte.",
+  "counters": {
+    "title": "Mes compteurs"
+  },
+  "actions": {
+    "create": "Nouveau compteur",
+    "createFirst": "Créer mon premier compteur",
+    "add": "Ajouter un compteur",
+    "cancel": "Annuler",
+    "close": "Fermer",
+    "save": "Enregistrer",
+    "submit": "Créer le compteur",
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "deleteCounter": "Supprimer le compteur",
+    "keep": "Conserver",
+    "reset": "Réinitialiser",
+    "clearSearch": "Effacer la recherche"
+  },
+  "search": {
+    "label": "Rechercher un compteur",
+    "placeholder": "Rechercher un compteur…",
+    "emptyTitle": "Aucun compteur trouvé",
+    "emptyDescription": "Essayez un autre mot ou retrouvez tous vos compteurs."
+  },
+  "sort": {
+    "label": "Trier par",
+    "recent": "Les plus récents",
+    "longest": "Le plus de jours",
+    "name": "Nom"
+  },
+  "empty": {
+    "eyebrow": "LE DÉBUT DE QUELQUE CHOSE",
+    "title": "Quel sera votre premier jour ?",
+    "description": "Une nouvelle habitude, un voyage, une plante adoptée… Donnez une place aux moments qui comptent.",
+    "inspiration": "Un peu d’inspiration",
+    "habit": "Une nouvelle habitude",
+    "memory": "Un beau souvenir",
+    "challenge": "Un petit défi"
+  },
+  "card": {
+    "edit": "Modifier {{name}}",
+    "delete": "Supprimer {{name}}",
+    "description": "Chaque jour écrit la suite.",
+    "history": "Historique",
+    "historyLabel_one": "Historique de {{name}}, {{count}} réinitialisation",
+    "historyLabel_other": "Historique de {{name}}, {{count}} réinitialisations",
+    "another": "Un autre moment à suivre ?"
+  },
+  "day_one": "jour",
+  "day_other": "jours",
+  "days_one": "{{count}} jour",
+  "days_other": "{{count}} jours",
+  "gentleNote": "Votre chemin, jour après jour.",
+  "dialog": {
+    "create": "Un nouveau compteur",
+    "edit": "Modifier le compteur",
+    "reset": "Un nouveau départ",
+    "delete": "Supprimer ce compteur ?",
+    "history": "Le fil de votre compteur"
+  },
+  "form": {
+    "introCreate": "Un nouveau départ, un souvenir, une petite victoire.",
+    "introEdit": "Les petits détails qui rendent ce compteur unique.",
+    "name": "Nom du compteur",
+    "namePlaceholder": "Ex. Mon dernier café",
+    "description": "Quelques mots",
+    "optional": "(facultatif)",
+    "descriptionPlaceholder": "Pourquoi ce moment compte pour vous…",
+    "date": "Date de départ",
+    "dayZero": "Le jour du départ correspond au jour 0.",
+    "color": "Une touche de couleur"
+  },
+  "colors": {
+    "sage": "Sauge",
+    "peach": "Pêche",
+    "lavender": "Lavande",
+    "sand": "Sable"
+  },
+  "reset": {
+    "intro": "Un nouveau départ pour {{name}}. La date précédente restera dans votre historique.",
+    "date": "Nouvelle date de départ",
+    "preview_one": "Le compteur passera à {{count}} jour.",
+    "preview_other": "Le compteur passera à {{count}} jours.",
+    "chooseDate": "Choisissez une date pour voir le nouveau total."
+  },
+  "delete": {
+    "description_one": "Le compteur « {{name}} » et son historique ({{count}} réinitialisation) seront définitivement supprimés.",
+    "description_other": "Le compteur « {{name}} » et son historique ({{count}} réinitialisations) seront définitivement supprimés."
+  },
+  "history": {
+    "intro": "{{name}} · Départ actuel le {{date}}.",
+    "empty": "Aucune réinitialisation pour le moment. Votre histoire continue !",
+    "newStart": "Nouveau départ le {{date}}",
+    "previous": "Départ précédent : {{date}}",
+    "recorded": "Réinitialisation n° {{number}} · Enregistrée le {{date}}",
+    "help": "Les dates sont conservées pour le futur calendrier de votre parcours."
+  },
+  "notice": {
+    "created": "Votre nouveau compteur est prêt.",
+    "edited": "Compteur modifié.",
+    "reset": "Nouveau départ enregistré. L’historique est conservé.",
+    "deleted": "Compteur supprimé."
+  },
+  "errors": {
+    "name": "Donnez un nom à votre compteur.",
+    "date": "Choisissez une date valide, au plus tard aujourd’hui.",
+    "read": "Impossible de lire vos compteurs. Vos données sont conservées. Vérifiez le stockage du navigateur, puis rechargez la page.",
+    "sync": "Les données ont changé dans un autre onglet et ne peuvent pas être lues. Rechargez la page.",
+    "conflict": "Les compteurs ont changé dans un autre onglet. Votre action n’a pas été appliquée : veuillez la renouveler.",
+    "save": "Enregistrement impossible. Votre action n’a pas été sauvegardée. Vérifiez l’espace disponible et le stockage du navigateur."
+  },
+  "theme": {
+    "light": "Passer au thème jour",
+    "dark": "Passer au thème nuit"
+  }
+}
